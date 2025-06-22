@@ -5,6 +5,12 @@ def factorial_recursive(n: int) -> int:
     :param n: Число, факториал которого нужно найти
     :return: n! - факториал числа n
     """
+
+    if n < 0:
+        raise ValueError("Не должно быть меньше 0")
+    if not isinstance(n, int):
+        raise TypeError("Только целое число")
+        
     if n == 0:
         return 1
     else:
